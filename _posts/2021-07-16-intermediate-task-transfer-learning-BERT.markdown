@@ -10,7 +10,7 @@ Intermediate-Task Transfer Learning with Pretrained Models for Natural Language 
 
 This is my second blog post. I intend to make these posts more frequently now as I've done the post-vaccination family visits I wanted to make.
 I saw a thread from NLP Twitter icon [Yoav Goldberg](https://twitter.com/yoavgo) a few days ago about it being a bad time to get into ML, and presumably by extension, NLP research. I think this paper gives some ideas of why this is the case.
-In the post-generalized-pre-training (GPT) age of NLP, there's an exceeding amount of focus on these models. In the fall/winter of 2018, there was a flurry of hype around these models, and the hype has perhaps, started to die down.
+In the post-generative-pre-training (GPT) age of NLP, there's an exceeding amount of focus on these models. In the fall/winter of 2018, there was a flurry of hype around these models, and the hype has perhaps, started to die down.
 I should take this time to plug some research that sought a different path at around the same time as GPT mania swept in. Harvard NLP put out [this tutorial on latent variable models](https://arxiv.org/pdf/1812.06834.pdf) that was a stark, and novel contrast to seemingly everything else coming out at the time. 
 
 Now, getting back to the GPT hype. At present, there still exists tons of questions around why and how GPT works. My previous post explored a paper that delved into the how in a good level of detail, the main finding that there was poor semantic encoding as shown through probing tasks.
