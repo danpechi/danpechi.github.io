@@ -7,6 +7,8 @@ categories: paper discussion
 
 Implicit Representations of Meaning in Neural Language Models
 
+Belinda Z. Li, Maxwell Nye, Jacob Andreas
+
 This is my first blog post on an actual paper in ages, so this is likely to be relatively poor quality. I wanted to start out with a more recent paper as there is inevitably some information-dense content worth unpacking for those like myself who haven’t been keeping quite as up to date with advances in NLP. This paper did not disappoint in this respect.
 The paper tackles an increasingly important question around what neural language models (NLM’s) know. This question of what LM’s know has come a long way from [Andrej Karpathy’s sentiment neuron](http://karpathy.github.io/2015/05/21/rnn-effectiveness/), and seeks to integrate notions of explainable AI with formal linguistic theories centering around world models. There are some clear threads here as well between this paper and [Experience Grounds Language](https://arxiv.org/pdf/2004.10151.pdf), which I will be posting about on this blog in the future.
 So, how do we get to what a language model knows? The answer, in short, is probing. 

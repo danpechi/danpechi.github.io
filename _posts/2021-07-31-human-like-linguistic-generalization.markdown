@@ -9,6 +9,8 @@ categories: paper discussion
 How Can We Accelerate Progress Towards Human-like Linguistic
 Generalization?
 
+Tal Linzen
+
 This is a position paper, and frankly a lighter read for folks who perhaps haven't delved too deeply into NLP research. With that being said, the paper covers some historical research developments in the last few years that are definitely appreciated better with some background in generative pre-trained (GPT) models.
 I will give that context here too. It really begins with what has been termed ["NLP's Imagenet moment"](https://ruder.io/nlp-imagenet/) when the first GPT models came into existence. These models were already pretty heavily parameterized, with weights learned on a generative language modeling task. The big idea, which had been circulating in the computer vision community for years, was to then use these
 these models with generalized language modeling capabilities to fine-tune on downstream tasks so as to build on top of the linguistic capabilities encoded in the base model.

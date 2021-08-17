@@ -43,3 +43,5 @@ Math: Discrete Math (Fall 2017), Probabilistic Systems Analysis (Spring 2018), I
 Linguistics: Philosophy of Language (Fall 2016), Intro to Linguistics (Fall 2017), Second Language Acquisition (Fall 2018), Bilingual Studies (Spring 2019)
 
 Independent Coursework: Andrew Ng's Intro to Machine Learning (Summer 2016), Geoff Hinton's Neural Networks for Machine Learning (Fall 2016), Christopher Manning's NLP with Deep Learning (Summer 2017)
+
+My full CV can be found [here](https://danpechi.github.io/Pechi_Dan_CV_2021.pdf)

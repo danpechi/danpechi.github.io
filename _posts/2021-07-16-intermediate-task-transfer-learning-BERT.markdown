@@ -8,6 +8,8 @@ categories: paper discussion
 
 Intermediate-Task Transfer Learning with Pretrained Models for Natural Language Understanding: When and Why Does It Work?
 
+Yada Pruksachatkun, Jason Phang, Haokun Liu, Phu Mon Htut, Xiaoyi Zhang, Richard Yuanzhe Pang, Clara Vania, Katharina Kann, Samuel R. Bowman
+
 This is my second blog post. I intend to make these posts more frequently now as I've done the post-vaccination family visits I wanted to make.
 I saw a thread from NLP Twitter icon [Yoav Goldberg](https://twitter.com/yoavgo) a few days ago about it being a bad time to get into ML, and presumably by extension, NLP research. I think this paper gives some ideas of why this is the case.
 In the post-generative-pre-training (GPT) age of NLP, there's an exceeding amount of focus on these models. In the fall/winter of 2018, there was a flurry of hype around these models, and the hype has perhaps, started to die down.

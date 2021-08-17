@@ -9,6 +9,8 @@ categories: paper discussion
 Learning Which Features Matter: RoBERTa Acquires a Preference for
 Linguistic Generalizations (Eventually)
 
+Alex Warstadt, Yian Zhang, Haau-Sing Li, Haokun Liu, Samuel R. Bowman
+
 This paper was a great read for two reasons. Firstly, its findings rebuke a recommendation against expansive training sets laid out by the paper in [my last post](https://danpechi.github.io/paper/discussion/2021/08/01/human-like-linguistic-generalization.html). Secondly, I didn't understand this paper well when I first tried reading it a month or two ago, and now I have a great idea of what it's about, and really like it.
 It's papers like these that make me remember the feeling of first understanding how the hell an LSTM worked and getting context for subsequent papers, although admittedly probing is not quite as technically demanding on the layreader to understand.
 
