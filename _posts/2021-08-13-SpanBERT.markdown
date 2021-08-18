@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "SpanBERT: Improving Pre-training by Representing
+and Predicting Spans (and a bit on pre-processing techniques)"
+date:   2021-08-13 23:02:17 -0400
+categories: paper discussion
+---
+
+SpanBERT: Improving Pre-training by Representing
+and Predicting Spans
+
+Mandar Joshi, Danqi Chen Yinhan Liu,
+Daniel S. Weld, Luke Zettlemoyer, Omer Levy
+
+We're throwing it back to roughly 2 years ago when researchers first realized that bigger is better for generative pre-training (GPT) models. This is roughly around the time when I got sucked into a job that didn't afford me the time to keep up with NLP research, so it's worth trekking this far back to appreciate some of the more foundational developments of NLP research.
+It was really the wild west at this time with the initial GPT, BERT, and ELMO models all making their respective big splashes using standard language modeling paradigms of sentence tokenization.
+
+Standard sentence tokenization is quite the assumption to make for how language models should work. After all, semantics is not all distributional, word-level semantics, but a rich world of morphemes coalescing and compound nouns uniting to give meaning to our words. One of the first papers that gave me an appreciation for this was [Sennrich et al. 2016's byte-pair encodings for neural machine translation](https://arxiv.org/pdf/1508.07909.pdf).
+This paper guided NLP research away from the usage of standard sentence tokenization in the context of machine translation, the idea being that breaking down words to morpheme-level tokenization makes for easier translation downstream. This makes sense; 'обошёл' is best broken down to 'обо' + 'шёл' to then get to the English 'walked around.' Of course, parsing these morphemes isn't as easy as using the pre-existing corpus of language morphemes that would ideally exist for all languages.
+This instead was done in a pretty nifty way using character co-occurrences, and the authors showed major improvements on downstream machine translation tasks way back when. BERT uses a similar subword tokenization scheme called WordPiece to great effect.
+
+This paper presents a similar pre-processing scheme, but instead of focusing on morpheme, subword-level tokenizing, instead functions at the multi-token, span level. The tokens 'Denver' and 'Broncos' when placed together should really be used as a single token. For passage-reading/QA and co-reference resolution tasks, this makes a ton of sense. 
+The paper very explicitly builds on top of BERT's masked language model (MLM) paradigm which the authors give some helpful background on. The idea of a MLM derives from psychology's Cloze test in which tokens of a sentence are missing, leaving the reader to fill in the blank based on surrounding words. For example, 'colorless green ideas ____ furiously.' Any one, who is a linguistic, could apply their inductive biases, and not rote-memorized signaling, to fill this sentence in.
+BERT doesn't always leave a blank in the training sentences, but may instead use another, random token, or leave the sentence as is. The big idea in this paper is to leave a span of contiguous tokens blank a la 'colorless ____ ____ ____ furiously.' This leaves us with predictions of multiple tokens from the surrounding tokens, although there is functionally still a prediction of each token in the span. This allows for the sorts of distributionally meaningful encodings of 'Denver Broncos,' that would then hopefully peter out into the model downstream.
+This is the case due to the way the authors define loss for any one token as the standard MLM objective plus a span boundary objective (SBO) that conditions each token in the span off of the embeddings on before and after the span, as well as a positional embedding. Notationally,
+L(token) = L_MLM(token) + L_SBO(token)
+=  log P(token | token_input)  log P(football | boundary_start_token_input, boundary_end_token_input, positional_embedding)
+In this way, each token in the span's representation is conditioned on similar information due to the SBO component. 
+The authors use a geometric distribution to determine the number of tokens to mask for each span, with an average of 3.8 tokens being masked. 
+
+Sure enough, using this approach presents significant improvement across a variety of QA and co-reference resolution tasks. The authors provide some great ablation results as well, including their own trained version of BERT. The section that's most interesting to me is a table where they compare different masking schemes.
+The authors compare not just the subword-masking of the original BERT paper, but named entities and noun phrases as well. Their scheme generally improves on the performance of these other masking schemes, especially for QA tasks.
+However, the subword scheme far outperforms other masking schemes for co-reference resolution, and other schemes fair somewhat well relative to their geometric spans on language inference tasks.
+This makes sense to me, especially as co-reference resolution is less likely to be comprised of compound words, whereas QA tasks are.
+
+The authors note that their idea of masked span modeling has already been adopted by [XLNet](https://arxiv.org/pdf/1906.08237.pdf) in its training. However, I think there remains a lot of questions about how best to model language. Obviously, standard tokenization provides a happy medium between the world of byte-pair encoding and span modeling (these aren't directly comparable though), however the level of detail and aggregation, respectively, in these approaches is also optimal depending on context.
+I'd be very curious to see if some frankensteined embedding a la [CoVE](https://arxiv.org/pdf/1708.00107.pdf) may prove useful here for getting both. I'd also be curious to see what the latent space may be like between embeddings achieved for a set vocabulary using span modeling versus sub-word modeling. We would obviously hope to see morpheme-level words like 'grief' to have similar embeddings across models, but what is the functional relationship between representations of 'Seattle Seahawks' between these two schemes?
+
+I've realized that as much as reading papers is cool, I should really get around to working with some of these innovations. I plan on making my next post on some exploration of either jiant or another tool that I've found via papers more recently. I fortunately and unfortunately had some friends suggest looking at other folks' research, and some of it is worthy of venturing down a rabbit hole or two. I just need to get back in the mode of reading papers in between model iterations again to get through it all.
