@@ -12,18 +12,18 @@ Here's some cool stuff I did not so long ago:
 
 [Meta-Turing Test Fall 2017](https://joehowarth.github.io/meta_turing/) 
 
-[Meta-Turing Test Read Me](https://docs.google.com/document/d/1I7kJ_GkVkm7A2TzrnS6BON5A1o1dZPvD0GrnZkoI1_w/edit?usp=sharing)
+[Meta-Turing Test Read Me](https://danpechi.github.io/Meta-Turing%20Test%20README.pdf)
 
 This was my final I did with Joe Howarth for my NLP class in undergrad. My work is analagous to, independently designed from, and a far worse version of [Li et al. 2017](https://arxiv.org/pdf/1701.06547.pdf). We weren't able to link up feedback from the discriminator into the language model, so we don't quite get to a generative adversarial network (GAN).
 We had the goal of also looping human feedback into the model to act as a sort of human-in-the-loop GAN, but this was a pain in the butt. In effect, you get to see if you are better than a discriminator AI at determining if the language model is human or not.
 If you perform worse than the AI, the singularity begins and humanity is doomed.
 
-[My Thesis](https://docs.google.com/document/d/1-RJDZJiX-w2XayW31BXrsAWKvvcF37CJs6FIE7uGpzM/edit?usp=sharing)
+[My Thesis](https://danpechi.github.io/Dan%20Pechi%20Thesis.pdf)
 
 I got to work from 2017 to 2019 at a defense research contractor using news events to predict cyber attacks. This started out with an sklearn model being trained on keywords from news articles, to a BERT model using full news snippets.
 Related submissions to relevant NLP and Cybersecurity/NLP conferences were unfruitful, turns out you can't reproduce data, and the resulting experiments, given to you by the government. I also got to explore and parse the Russian dark web to identify relevant hacker forums and marketplaces.
 
-[Cognitive Science Spring 2018 Final](https://docs.google.com/document/d/1oSZ9GBqXkuqUYJAGGtMHYmW2rb66PWvJQVUNHcXPCJM/edit?usp=sharing)
+[Cognitive Science Spring 2018 Final](https://danpechi.github.io/A%20Review%20of%20Memory%2C%20Translation%2C%20and%20Bilingualism.pdf)
 
 A Review of Memory, Translation, and Bilingualism. I touch on the cognitive science behind these ideas, as well as their relevance to machine translation algorithms.
 
