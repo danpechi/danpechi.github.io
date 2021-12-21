@@ -1,0 +1,79 @@
+---
+layout: post
+title:  "Updates and Generalization Shortcuts"
+date:   2021-12-20 23:02:17 -0400
+categories: paper discussion
+---
+
+It has been a very long time since I last posted. I had been under the impression that applying to an NLP PhD program was a simple, straightforward process. 
+As it turns out, there's a lot that goes into an application. I've had the chance in the past 4 months to chat with folks in a number of programs, getting a sense of what it takes to be accepted into desirable programs.
+The answer, is a lot, and a lot more than what most undergrad students like myself have to show for 4 years. More specifically, expectations around research experience and publications are at odds with the average 
+undergrad experience, even one which involves some flavor of machine learning or NLP research. So, after some discussion with my former advisor at Tufts, I was able to connect with a colleague at UMass Lowell, where as of a few months ago,
+I am involved with a research group, reading the latest NLP papers and currently doing some preliminary research work. So, despite my blog's emptiness, I have in fact been reading quite a few papers. I will provide a comprehensive list of these papers below.
+This time has been both challenging for me while balancing my normal work, and also deeply impactful for exposing me to 1. modern NLP research and 2. the issues facing researchers today.
+My lab has in particular done a lot of work investigating more general principles of PLM learning. I had initially chatted with my lab's PI about investigating scaling laws, IE how models of increasing parameter size or training on increasing number of training tokens increase performance.
+I did my research and found papers that had investigated these scaling laws in detail. One in particular, [When Do You Need Billions of Words of Pretraining Data?](https://aclanthology.org/2021.acl-long.90.pdf) was particularly well-structured for giving insights into how training data size impacts performance.
+As it turns out, you CAN train with less data on simpler tasks, especially for classifier probing. However, tasks that require higher dimensions of language like pragmatics and commonsense reasoning do require the full gamut of billions of tokens of training data.
+What's particularly interesting is that this scaling doesn't appear to stop at 30B tokens. Ie, training on 100B tokens may further improve performance on datasets that test commonsense like SuperGLUE. There were a few papers which I'll highlight below that look at similar concepts; 
+I also read a ton about knowledge distillation to explore the parameter size scaling effects.
+
+These ideas behind scaling laws imply that through inductive biases and the training processes, there still may be ways to more efficiently train PLM with minimal sacrifice to performance. Ie, these models still generalize without over 30B tokens of training data.
+More recently, my work has shifted towards knowledge generalization, and one of the papers I shared has driven more of this discussion. While I don't have a beautifully crafted blog post to share on this, as part of our reading group, I started recording videos for my papers, and I'm excited to start sharing them on a weekly basis here!
+In my video for [Comparing Test Sets with Item Response Theory](https://www.youtube.com/watch?v=CpUh1_fgnwE), I talk about how many of the means by which we're evaluating models are limited insofar as differentiating performance on them is not meaningful. More specifically, with Item Response Theory, we can imagine 3 parameters that determine the effectiveness of a dataset:
+difficulty (how strong a model needs to be to be correct), discrimination (how effective the example differentiates similar models), and guessing (the likelihood a weak model arbitrarily is correct). The authors construct models to represent these dimensions for 29 datasets, finding that certain datasets are somewhat useless now.
+More relevant to our work is their findings about the distribution of difficulty in datasets. I talk about this more in detail in the video, but the authpr's findings here suggest there are segments of the dataset that are harder than others, and that these segments range in their discriminative abilities between different models.
+This is an interesting finding in and of itself, but merits further research to understand which examples dramatically alter training, and how one might better consider the difficulty and discrimination of training data in order to build generalized models. Beyond this, I'm curious whether human difficulty judgments square with these findings.
+Additionally, the difficulty findings pair nicely with the other paper I read on curriculum learning, which finds there to be benefits to ordered training by difficulty in PLM's. 
+I look forward to posting more on this topic in the future; for now I'm reading more on generalization in language models, and will likely have additional videos up soon!
+
+Here are videos for 2 other papers I read:
+[On the Role of Corpus Ordering in Language Modeling Paper Discussion](https://www.youtube.com/watch?v=IR8IIgw1I4I)
+
+[Show Your Work: Scratchpads for Intermediate Computation with Language Models Paper Discussion](https://www.youtube.com/watch?v=Shb-WRlu1Tw) 
+
+And a laundry list of all the papers I've read in my blog absence:
+
+Two earlier videos which are bad:
+[The Emergence of the Shape Bias Results from Communicative Efficiency](https://www.youtube.com/watch?v=tRz3L5C3jVA)
+
+[The Low-Dimensional Linear Geometry of Contextualized Word Representations](https://www.youtube.com/watch?v=LnARmHIOOUU)
+
+I had skepticism about their findings, but the dataset is certainly interesting; would be curious to see IRT applied to this dataset:
+[BabyBERTa: Learning More Grammar With Small-Scale Child-Directed Language](https://aclanthology.org/2021.conll-1.49.pdf)
+
+[When Do You Need Billions of Words of Pretraining Data?](https://aclanthology.org/2021.acl-long.90.pdf)
+
+Pretty similar to above paper:
+[Probing Across Time: What Does RoBERTa Know and When?](https://arxiv.org/pdf/2104.07885.pdf)
+
+[Contrastive Explanations for Model Interpretability](https://arxiv.org/pdf/2103.01378.pdf)
+
+[When Attention Meets Fast Recurrence: Training Language Models with Reduced Compute (Outstanding Paper at EMNLP)](https://arxiv.org/pdf/2102.12459.pdf)
+
+[Effects of Parameter Norm Growth During Transformer Training: Inductive Bias from Gradient Descent](https://aclanthology.org/2021.emnlp-main.133.pdf)
+
+This makes sense on its surface - there are certain model parameters that contribute less to decisions - prune 'em!
+[Layer-wise Model Pruning based on Mutual Information](https://arxiv.org/pdf/2108.12594.pdf)
+
+[Block Pruning For Faster Transformers](https://arxiv.org/pdf/2109.04838.pdf)
+
+I was proud of finding this paper in the haystack of EMNLP submissions as it relates to work our lab did before. 
+I wrote up a short description of how the two papers compare and how we can reconcile their differences.
+[All Bark and No Bite: Rogue Dimensions in Transformer Language
+Models Obscure Representational Quality](https://arxiv.org/pdf/2109.04404.pdf)
+
+This was one of the first papers I read with the group; it's particularly cool to me as it's at the intersection of human learning theory and NLP 
+[One Teacher is Enough?
+Pre-trained Language Model Distillation from Multiple Teachers](https://arxiv.org/pdf/2106.01023.pdf)
+
+[Dynamic Knowledge Distillation for Pre-trained Language Models](https://arxiv.org/pdf/2109.11295.pdf)
+
+And lastly some valuable background papers for KD:
+[ROSITA: Refined BERT cOmpreSsion with InTegrAted techniques](https://arxiv.org/pdf/2103.11367.pdf)
+
+This one's super popular/used for KD (and scaling) benchmarks:
+[TinyBERT: Distilling BERT for Natural Language Understanding](https://arxiv.org/pdf/1909.10351.pdf)
+
+Along what dimensions can we squish BERT representations down with minimal loss in accuracy?
+[Marginal Utility Diminishes: Exploring the Minimum Knowledge for
+BERT Knowledge Distillation](https://arxiv.org/pdf/2106.05691.pdf)
