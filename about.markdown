@@ -4,9 +4,18 @@ title: About
 permalink: /about/
 ---
 
-Hi! I'm Dan; I'm currently a Data Scientist at [Comlinkdata](https://comlinkdata.com/), a telecom market research firm. I graduated from Tufts in 2019 with majors in Computational Linguistics, Cognitive Brain Science, and a minor in Russian. Previously, I built machine learning products for clients as a Data Science Consultant at Oliver Wyman Digital, and for the government as a Part-Time Software Engineer at Charles River Analytics.
+Hi! I'm Dan; I currently work with Anna Rumshisky at UMass Lowell's Text Machine Lab where I research human-inspired language modeling at reduced scale.
+I also work as a Data Scientist at [Opensignal](https://opensignal.com/), a telecom market research firm. I graduated from Tufts in 2019 with majors in Computational Linguistics, Cognitive Brain Science, and a minor in Russian. Previously, I built machine learning products for clients as a Data Science Consultant at Oliver Wyman Digital, and for the government as a Part-Time Software Engineer at Charles River Analytics.
 
 When not modeling the telecom world, I read (predominantly NLP) papers, and write about them here; my previous blog from my undergrad years is [here](https://dandeeplearningblog.wordpress.com/)
+
+Here's some cool stuff I did recently:
+
+[Prompting Survey with Namrata Shivagunde February 2022](https://docs.google.com/presentation/d/1pFi70VRfVk24USZTzLih3of5b2onK2rkY5xbGAys564/edit#slide=id.g114bb6d4e27_0_500)
+
+Prompting methods have exploded in recent years, so to explore this space, we put together a survey of methods and trends in this space. It should be noted that since writing this, there's a ton of amazing, new prompting research including inverse prompting, and prompt generation for pre-training data.
+
+I recently wrote a research paper along with Vijeta Deshpande and Shree Thatte on language modeling at reduced scale. This will be linked following conference review.
 
 Here's some cool stuff I did not so long ago:
 
@@ -44,4 +53,4 @@ Linguistics: Philosophy of Language (Fall 2016), Intro to Linguistics (Fall 2017
 
 Independent Coursework: Andrew Ng's Intro to Machine Learning (Summer 2016), Geoff Hinton's Neural Networks for Machine Learning (Fall 2016), Christopher Manning's NLP with Deep Learning (Summer 2017)
 
-My full CV can be found [here](https://danpechi.github.io/Pechi_Dan_CV_2021.pdf)
+My full CV can be found [here](https://danpechi.github.io/Pechi_Dan_CV_2023_vF.pdf)
