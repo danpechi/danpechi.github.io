@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi! I'm Dan; I currently work at NYU CDS conducting NLP research (efficient bias induction, lost in the middle context), and previously worked with Anna Rumshisky at UMass Lowell's Text Machine Lab where I research human-inspired language modeling at reduced scale. I published a [paper at ACL 2023](https://arxiv.org/abs/2305.17266) during my time there.
+Hi! I'm Dan; I currently work at NYU CDS conducting NLP research (efficient bias induction, lost in the middle context), and previously worked with Anna Rumshisky at UMass Lowell's Text Machine Lab where I researched human-inspired language modeling at reduced scale. I published a [paper at ACL 2023](https://arxiv.org/abs/2305.17266) during my time there.
 I also work as a NLP-focused ML/AI Engineer at [JetBlue](https://www.jetblue.com/). I graduated from Tufts in 2019 with majors in Computational Linguistics, Cognitive Brain Science, and a minor in Russian. Previously, I built machine learning products for clients as a Data Science Consultant at Oliver Wyman Digital, as a Data Scientist at OpenSignal, a telecom market research startup, and for the government as a Part-Time Software Engineer at Charles River Analytics.
 
 When not modeling the airline world, I read (predominantly NLP) papers, and write about them here; my previous blog from my undergrad years is [here](https://dandeeplearningblog.wordpress.com/)
@@ -14,8 +14,6 @@ Here's some other cool stuff I did recently:
 [Prompting Survey with Namrata Shivagunde February 2022](https://docs.google.com/presentation/d/1pFi70VRfVk24USZTzLih3of5b2onK2rkY5xbGAys564/edit#slide=id.g114bb6d4e27_0_500)
 
 Prompting methods have exploded in recent years, so to explore this space, we put together a survey of methods and trends in this space. It should be noted that since writing this, there's a ton of amazing, new prompting research including inverse prompting, and prompt generation for pre-training data.
-
-I recently wrote a research paper along with Vijeta Deshpande and Shree Thatte on language modeling at reduced scale. This will be linked following conference review.
 
 Here's some cool stuff I did not so long ago:
 
